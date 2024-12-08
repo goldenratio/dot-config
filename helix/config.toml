@@ -1,0 +1,30 @@
+theme = "onedark"
+
+[editor]
+mouse = true
+
+[editor.lsp]
+display-inlay-hints = true
+
+[keys.normal.space]
+i = ":toggle lsp.display-inlay-hints"
+
+[keys.insert]
+"C-s" = ":w"
+
+[keys.normal]
+# duplicate line up
+"C-up" = ["extend_to_line_bounds", "yank", "open_above", "normal_mode", "replace_with_yanked", "collapse_selection"] 
+# duplicate line down
+"C-down" =  ["extend_to_line_bounds", "yank", "open_below", "normal_mode", "replace_with_yanked", "collapse_selection"]
+
+# move line up
+S-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+# move line down
+S-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+
+# save cmd
+"C-s" = ":w"
+
+# opens file picker from current buffer dir
+minus = "file_picker_in_current_buffer_directory"

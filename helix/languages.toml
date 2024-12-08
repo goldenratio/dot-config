@@ -1,0 +1,14 @@
+[[language]]
+name = "rust"
+auto-format = true
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[[language]]
+name = "jsx"
+language-servers = [ "typescript-language-server" ]
+
+[[language]]
+name = "tsx"
+language-servers = [ "typescript-language-server" ]
