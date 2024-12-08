@@ -1,1 +1,1 @@
-# got-config
+# dot-config
