@@ -3,6 +3,14 @@ theme = "onedark"
 [editor]
 mouse = true
 
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+
 [editor.lsp]
 display-inlay-hints = true
 
