@@ -9,7 +9,7 @@ normal = "block"
 select = "underline"
 
 [editor.file-picker]
-hidden = false
+hidden = true
 
 [editor.statusline]
 left = ["mode", "spinner", "version-control", "file-name"]
@@ -23,6 +23,9 @@ i = ":toggle lsp.display-inlay-hints"
 [keys.insert]
 "C-s" = ":w"
 
+C-right = "goto_line_end_newline"
+C-left = "goto_line_start"
+
 [keys.normal]
 # duplicate line up
 "C-up" = ["extend_to_line_bounds", "yank", "open_above", "normal_mode", "replace_with_yanked", "collapse_selection"] 
@@ -33,6 +36,9 @@ i = ":toggle lsp.display-inlay-hints"
 S-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 # move line down
 S-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+
+C-right = "goto_line_end_newline"
+C-left = "goto_line_start"
 
 # save cmd
 "C-s" = ":w"

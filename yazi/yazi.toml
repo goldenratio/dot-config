@@ -1,0 +1,10 @@
+[opener]
+edit = [
+  { run = 'hx "$@"', block = true },
+  { run = 'code "$@"', block = true }
+]
+
+[plugin]
+prepend_previewers = [
+  { name = "*.md", run = "glow" },
+]
