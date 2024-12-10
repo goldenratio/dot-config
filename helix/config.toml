@@ -47,7 +47,7 @@ C-left = "goto_line_start"
 minus = "file_picker_in_current_buffer_directory"
 
 # open git commit
-C-k = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+C-k = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw", ":reload-all"]
 
 # reload buffers
 C-r = ":reload-all"
