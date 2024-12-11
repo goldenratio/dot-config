@@ -1,6 +1,6 @@
 [opener]
 play = [
-	{ run = 'xdg-open "$@"', desc = "Open" }
+  { run = 'xdg-open "$@"', desc = "Open" }
 ]
 edit = [
   { run = 'hx "$@"', block = true },
