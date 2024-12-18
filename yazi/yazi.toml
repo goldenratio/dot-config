@@ -3,8 +3,8 @@ play = [
   { run = 'xdg-open "$@"', desc = "Open" }
 ]
 edit = [
-  { run = 'hx "$@"', block = true },
-  { run = 'code "$@"', block = true }
+  { run = 'hx "$@"', desc = "Edit" },
+  { run = 'tilix -w "$@"', block = false, desc = "Open in Terminal" }
 ]
 
 [plugin]
