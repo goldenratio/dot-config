@@ -30,7 +30,7 @@ C-left = "goto_line_start"
 esc = ["collapse_selection", "keep_primary_selection"]
 
 # duplicate line up
-"C-up" = ["extend_to_line_bounds", "yank", "open_above", "normal_mode", "replace_with_yanked", "collapse_selection"] 
+"C-up" = ["extend_to_line_bounds", "yank", "open_above", "normal_mode", "replace_with_yanked", "collapse_selection"]
 # duplicate line down
 "C-down" =  ["extend_to_line_bounds", "yank", "open_below", "normal_mode", "replace_with_yanked", "collapse_selection"]
 
