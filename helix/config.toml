@@ -16,12 +16,15 @@ left = ["mode", "spinner", "version-control", "file-name"]
 
 [editor.lsp]
 display-inlay-hints = false
+auto-signature-help = false
 
 [keys.normal.space]
 i = ":toggle lsp.display-inlay-hints"
+z = ":sh pwd"
 
 [keys.insert]
 "C-s" = ":w"
+"C-l" = "signature_help"
 
 C-right = "goto_line_end_newline"
 C-left = "goto_line_start"
@@ -30,7 +33,7 @@ C-left = "goto_line_start"
 esc = ["collapse_selection", "keep_primary_selection"]
 
 # duplicate line up
-"C-up" = ["extend_to_line_bounds", "yank", "open_above", "normal_mode", "replace_with_yanked", "collapse_selection"]
+"C-up" = ["extend_to_line_bounds", "yank", "open_above", "normal_mode", "replace_with_yanked", "collapse_selection"] 
 # duplicate line down
 "C-down" =  ["extend_to_line_bounds", "yank", "open_below", "normal_mode", "replace_with_yanked", "collapse_selection"]
 
@@ -50,13 +53,13 @@ minus = "file_picker_in_current_buffer_directory"
 
 # open git commit
 C-k = [
-    ":write-all",
-    ":new",
-    ":insert-output lazygit",
+    ":write-all", 
+    ":new", 
+    ":insert-output lazygit", 
     ":set mouse false", # First disable mouse to hint helix into activating it
     ":set mouse true",
-    ":buffer-close!",
-    ":redraw",
+    ":buffer-close!", 
+    ":redraw", 
     ":reload-all"
 ]
 
