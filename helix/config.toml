@@ -24,7 +24,7 @@ z = ":sh pwd"
 
 [keys.insert]
 "C-s" = ":w"
-"C-l" = "signature_help"
+"C-k" = "signature_help"
 
 C-right = "goto_line_end_newline"
 C-left = "goto_line_start"
