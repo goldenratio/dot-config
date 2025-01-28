@@ -13,7 +13,7 @@ select = "underline"
 hidden = true
 
 [editor.statusline]
-left = ["mode", "spinner", "version-control", "file-name", "file-modification-indicator"]
+left = ["mode", "spinner", "version-control", "file-modification-indicator", "file-name"]
 
 [editor.lsp]
 display-inlay-hints = false
