@@ -1,6 +1,9 @@
 [language-server.swiftlint]
 command = "swiftlint"
 
+[language-server.vscode-json-language-server]
+config = { "provideFormatter" = true, "json" = { "keepLines" = { "enable" = true } } }
+
 #######
 
 [[language]]
