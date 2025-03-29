@@ -1,37 +1,43 @@
 [language-server.vscode-json-language-server]
 config = { "provideFormatter" = true, "json" = { "keepLines" = { "enable" = true } } }
 
+[language-server.codebook]
+command = "codebook-lsp"
+args = ["serve"]
+
 #######
 
 [[language]]
 name = "swift"
 auto-format = true
+language-servers = [ "sourcekit-lsp", "codebook" ]
 
 [[language]]
 name = "rust"
 auto-format = true
+language-servers = [ "rust-analyzer", "codebook" ]
 
 [language-server.rust-analyzer.config.check]
 command = "clippy"
 
 [[language]]
 name = "jsx"
-language-servers = [ "typescript-language-server" ]
+language-servers = [ "typescript-language-server", "codebook" ]
 auto-format = true
 
 [[language]]
 name = "tsx"
-language-servers = [ "typescript-language-server" ]
+language-servers = [ "typescript-language-server", "codebook" ]
 auto-format = true
 
 [[language]]
 name = "typescript"
-language-servers = [ "typescript-language-server" ]
+language-servers = [ "typescript-language-server", "codebook" ]
 auto-format = true
 
 [[language]]
 name = "javascript"
-language-servers = [ "typescript-language-server" ]
+language-servers = [ "typescript-language-server", "codebook" ]
 auto-format = true
 
 ###############
