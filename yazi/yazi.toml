@@ -1,9 +1,9 @@
 [opener]
 play = [
-  { run = 'xdg-open "$@"', desc = "Open" }
+	{ run = 'xdg-open "$@"', desc = "Open" }
 ]
 edit = [
-  { run = 'hx "$@"', desc = "Edit" },
+	{ run = '$EDITOR "$@"', block = true, for = "unix" },
   { run = 'tilix -w "$@"', block = false, desc = "Open in Terminal" }
 ]
 
