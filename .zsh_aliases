@@ -1,0 +1,9 @@
+alias cat='bat'
+alias open='xdg-open'
+alias z='yazi'
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+alias hxx="zellij --layout ~/.config/zellij/layouts/helix.kdl"
+
