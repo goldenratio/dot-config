@@ -3,7 +3,7 @@ theme = "onedark"
 [editor]
 mouse = true
 line-number = "relative"
-end-of-line-diagnostics = "hint"
+# end-of-line-diagnostics = "hint"
 
 [editor.inline-diagnostics]
 cursor-line = "error"
@@ -27,6 +27,10 @@ auto-signature-help = false
 i = ":toggle lsp.display-inlay-hints"
 # copy current file name to clipboard
 "=" = "@\"%p<space>yu"
+
+[keys.normal.space.q]
+q = ":toggle inline-diagnostics.cursor-line error disable"
+w = ":toggle end-of-line-diagnostics hint disable"
 
 [keys.insert]
 "C-s" = ":w"
