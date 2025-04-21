@@ -6,7 +6,7 @@ line-number = "relative"
 # end-of-line-diagnostics = "hint"
 
 [editor.inline-diagnostics]
-cursor-line = "error"
+# cursor-line = "error"
 
 [editor.cursor-shape]
 insert = "bar"
