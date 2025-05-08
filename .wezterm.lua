@@ -1,14 +1,15 @@
 local wezterm = require 'wezterm'
 
 return {
-  font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Medium" }),
+  -- front_end = "OpenGL",
+  font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Regular" }),
   font_size = 10.0,
   color_scheme = "Monokai (dark) (terminal.sexy)",
   window_padding = {
-    left = 0,
-    right = 0,
-    top = 0,
-    bottom = 0,
+    left = 2,
+    right = 2,
+    top = 2,
+    bottom = 2,
   },
   use_resize_increments = true,
   use_fancy_tab_bar = true,
@@ -59,6 +60,16 @@ return {
       key = 'Enter',
       mods = 'CTRL|SHIFT',
       action = wezterm.action.TogglePaneZoomState,
+    },
+    {
+      key = "t",
+      mods = "CTRL",
+      action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+    },
+    {
+      key = 'v',
+      mods = 'CTRL',
+      action = wezterm.action.PasteFrom 'Clipboard',
     },
     { key = '1', mods = 'CTRL', action = wezterm.action.ActivateTab(0) },
     { key = '2', mods = 'CTRL', action = wezterm.action.ActivateTab(1) },
