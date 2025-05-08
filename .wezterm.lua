@@ -32,5 +32,15 @@ return {
       mods = 'CTRL',
       action = wezterm.action.SplitHorizontal({ domain = 'CurrentPaneDomain' }),
     },
+    {
+      key = "[",
+      mods = "CTRL",
+      action = wezterm.action { ActivatePaneDirection = "Left" },
+    },
+    {
+      key = "]",
+      mods = "CTRL",
+      action = wezterm.action { ActivatePaneDirection = "Right" },
+    },
   },
 }
