@@ -1,37 +1,17 @@
 local wezterm = require 'wezterm'
 
-local mux = wezterm.mux
-local current_pane_index = 1
-
-wezterm.on("cycle_panes", function(window, pane)
-  local tab = window:active_tab()
-  local panes = tab:panes()
-
-  -- find the index of the currently active pane
-  for i, p in ipairs(panes) do
-    if p:pane_id() == pane:pane_id() then
-      current_pane_index = i
-      break
-    end
-  end
-
-  -- move to next pane
-  local next_index = current_pane_index % #panes + 1
-  local next_pane = panes[next_index]
-
-  window:activate_pane(next_pane)
-end)
-
 return {
   font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Medium" }),
   font_size = 10.0,
   color_scheme = "Monokai (dark) (terminal.sexy)",
   window_padding = {
-    left = 2,
-    right = 2,
-    top = 2,
-    bottom = 2,
+    left = 0,
+    right = 0,
+    top = 0,
+    bottom = 0,
   },
+  use_resize_increments = true,
+  use_fancy_tab_bar = true,
   -- Set the initial window size (columns x rows)
   initial_cols = 220,
   initial_rows = 60,
