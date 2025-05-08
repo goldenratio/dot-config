@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 
 return {
-  font = wezterm.font("JetBrainsMono Nerd Font"),
+  font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Medium" }),
   font_size = 10.0,
   color_scheme = "Monokai (dark) (terminal.sexy)",
   window_padding = {
@@ -20,6 +20,7 @@ return {
     cursor_bg = "white",
     cursor_fg = "black",     -- optional: text color under the cursor
     cursor_border = "white", -- optional: border color of the cursor
+    background = "#1e1e1e",
   },
   keys = {
     {
