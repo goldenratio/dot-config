@@ -42,6 +42,11 @@ return {
       mods = "CTRL",
       action = wezterm.action { ActivatePaneDirection = "Right" },
     },
+    {
+      key = 'Enter',
+      mods = 'CTRL|SHIFT',
+      action = wezterm.action.TogglePaneZoomState,
+    },
     { key = '1', mods = 'CTRL', action = wezterm.action.ActivateTab(0) },
     { key = '2', mods = 'CTRL', action = wezterm.action.ActivateTab(1) },
     { key = '3', mods = 'CTRL', action = wezterm.action.ActivateTab(2) },
