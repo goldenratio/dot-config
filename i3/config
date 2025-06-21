@@ -43,7 +43,7 @@ exec_always --no-startup-id bash -c "sleep 0.5 && feh --bg-fill ~/.config/i3/wal
 # Keyboard us,ee
 exec --no-startup-id setxkbmap -layout "us,ee" -option "grp:alt_shift_toggle"
 # Weather
-exec --no-startup-id ~/.config/i3/scripts/weather.sh > /tmp/weather.txt
+exec --no-startup-id ~/.config/i3/scripts/weather.sh
 # Avoid system going idle on inactivity
 exec xset s off
 exec xset -dpms
