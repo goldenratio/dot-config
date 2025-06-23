@@ -4,6 +4,7 @@ return {
   -- front_end = "OpenGL",
   font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Regular" }),
   font_size = 10.0,
+  harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
   color_scheme = "Monokai (dark) (terminal.sexy)",
   window_padding = {
     left = 2,
