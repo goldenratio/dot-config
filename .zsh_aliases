@@ -5,5 +5,4 @@ alias z='yazi'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
-alias hxx="zellij --layout ~/.config/zellij/layouts/helix.kdl"
-
+alias cali='khal interactive'
