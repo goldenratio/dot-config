@@ -6,3 +6,5 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
 alias cali='khal interactive'
+
+alias set-tab-title='wezterm cli set-tab-title'
