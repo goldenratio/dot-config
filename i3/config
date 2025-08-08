@@ -47,10 +47,13 @@ exec_always --no-startup-id bash -c "sleep 0.5 && feh --bg-fill ~/.config/i3/wal
 # Keyboard us,ee
 exec --no-startup-id setxkbmap -layout "us,ee" -option "grp:alt_shift_toggle"
 # Weather
-exec --no-startup-id ~/.config/i3/scripts/weather.sh
+# exec --no-startup-id ~/.config/i3/scripts/weather.sh
 # Avoid system going idle on inactivity
 exec xset s off
 exec xset -dpms
+
+# restore workpsace layout
+exec --no-startup-id ~/.config/i3/scripts/load_layout.sh
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -84,7 +87,7 @@ bindsym $mod+b exec firefox
 # lock screen
 bindsym Control+$alt+q exec i3lock -c 000000  # black background
 # systemctrl menu
-bindsym Control+$alt+Delete exec --no-startup-id ~/Documents/projects/systemctl-menu/target/release/systemctl-menu
+bindsym Control+$alt+Delete exec --no-startup-id ~/.local/bin/systemctl-menu
 # Toggle screen recording with Mod+Shift+r
 bindsym $mod+Shift+v exec --no-startup-id ~/.config/i3/scripts/screen-record.sh
 
@@ -161,6 +164,10 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+# bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Tab workspace next
+# bindsym $mod+Tab+Shift workspace prev
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1

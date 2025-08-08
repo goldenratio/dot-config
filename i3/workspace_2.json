@@ -1,0 +1,49 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1084,
+       "width": 1764,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "~",
+    "percent": 0.4,
+    "swallows": [
+       {
+       "class": "^org\\.wezfurlong\\.wezterm$",
+       "instance": "^org\\.wezfurlong\\.wezterm$",
+       "title": "^\\~$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1408,
+       "width": 849,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "Mozilla Firefox",
+    "percent": 0.6,
+    "swallows": [
+       {
+       "class": "^org\\.mozilla\\.firefox$",
+       "instance": "^Navigator$",
+       "machine": "^i3wm\\-local$",
+       "title": "^Mozilla\\ Firefox$",
+       "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
