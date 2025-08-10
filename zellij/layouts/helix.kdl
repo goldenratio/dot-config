@@ -1,6 +1,0 @@
-layout {
-  pane {
-    command "sh"
-    args "-c" "hx .; zellij k $ZELLIJ_SESSION_NAME"
-  }
-}
