@@ -31,6 +31,16 @@ i = ":toggle lsp.display-inlay-hints"
 [keys.normal.space.q]
 q = ":toggle inline-diagnostics.cursor-line error disable"
 w = ":toggle end-of-line-diagnostics hint disable"
+# search and replace
+r = [
+    ":write-all",
+    ":insert-output scooter >/dev/tty",
+    ":redraw",
+    ":set mouse false", # First disable mouse to hint helix into activating it
+    ":set mouse true",
+    ":reload-all"
+]
+
 
 [keys.insert]
 "C-s" = ":w"
