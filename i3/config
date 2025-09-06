@@ -20,6 +20,8 @@ font pango:JetBrainsMonoNL Nerd Font Mono Medium 12
 # hide title bar
 for_window [class="^.*"] border pixel 2
 
+# for_window [class="^sun-applet-Main$"] floating enable
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -68,6 +70,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Custom
 #interactive screenshot by pressing printscreen
 bindsym Print exec gnome-screenshot -i
+bindsym Control+Shift+4 exec maim -s ~/Pictures/"Screenshot from $(date +'%Y-%m-%d %H-%M-%S').png"
+bindsym Control+Shift+3 exec maim ~/Pictures/"Screenshot from $(date +'%Y-%m-%d %H-%M-%S').png"
 #crop-area screenshot by pressing Mod + printscreen
 # bindsym $mod+Print exec gnome-screenshot -a # doesn't work
 # Brightness
@@ -90,6 +94,8 @@ bindsym Control+$alt+q exec i3lock -c 000000  # black background
 bindsym Control+$alt+Delete exec --no-startup-id ~/.local/bin/systemctl-menu
 # Toggle screen recording with Mod+Shift+r
 bindsym $mod+Shift+v exec --no-startup-id ~/.config/i3/scripts/screen-record.sh
+# Center a floating window
+bindsym $mod+c move position center
 
 # kill focused window
 bindsym $mod+Shift+q kill
