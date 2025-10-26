@@ -27,6 +27,8 @@ auto-signature-help = false
 i = ":toggle lsp.display-inlay-hints"
 # copy current file name to clipboard
 "=" = "@\"%p<space>yu"
+# show git blame
+B = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{cursor_line},+1:%{buffer_name}"
 
 [keys.normal.space.q]
 q = ":toggle inline-diagnostics.cursor-line error disable"
