@@ -33,16 +33,14 @@ B = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{curs
 [keys.normal.space.q]
 q = ":toggle inline-diagnostics.cursor-line error disable"
 w = ":toggle end-of-line-diagnostics hint disable"
+s = ":toggle soft-wrap.enable"
 # search and replace
 r = [
     ":write-all",
-    ":insert-output scooter >/dev/tty",
+    ":insert-output scooter --no-stdin >/dev/tty",
     ":redraw",
-    ":set mouse false", # First disable mouse to hint helix into activating it
-    ":set mouse true",
     ":reload-all"
 ]
-
 
 [keys.insert]
 "C-s" = ":w"
@@ -90,6 +88,8 @@ C-k = [
 C-r = ":reload-all"
 
 # open yazi file picker
+## Zellij
+# C-y = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh open"
 ## wezterm
 C-y = ":sh wezterm cli split-pane --left --percent 30 -- ~/.config/helix/wezilix.sh $WEZTERM_PANE open    zoom > /dev/null"
 
