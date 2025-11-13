@@ -50,6 +50,16 @@ return {
       action = wezterm.action { ActivatePaneDirection = "Right" },
     },
     {
+      key = "LeftArrow",
+      mods = "CTRL|SHIFT",
+      action = wezterm.action { ActivatePaneDirection = "Left" },
+    },
+    {
+      key = "RightArrow",
+      mods = "CTRL|SHIFT",
+      action = wezterm.action { ActivatePaneDirection = "Right" },
+    },
+    {
       key = 'UpArrow',
       mods = 'CTRL|SHIFT',
       action = wezterm.action { ActivatePaneDirection = "Up" },
@@ -88,5 +98,7 @@ return {
     { key = '7', mods = 'CTRL', action = wezterm.action.ActivateTab(6) },
     { key = '8', mods = 'CTRL', action = wezterm.action.ActivateTab(7) },
     { key = '9', mods = 'CTRL', action = wezterm.action.ActivateTab(-1) }, -- last tab
+    { key = '{', mods = 'SHIFT|SUPER', action = wezterm.action.MoveTabRelative(-1) },
+    { key = '}', mods = 'SHIFT|SUPER', action = wezterm.action.MoveTabRelative(1) },
   },
 }
