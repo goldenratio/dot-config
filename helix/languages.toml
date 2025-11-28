@@ -6,6 +6,10 @@ command = "codebook-lsp"
 args = ["serve"]
 
 #######
+[[language]]
+name = "json"
+file-types = ["json", "jsonc", { glob = "*.json.schema" }]
+language-servers = [ "vscode-json-language-server" ]
 
 [[language]]
 name = "swift"
