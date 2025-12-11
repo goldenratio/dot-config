@@ -46,7 +46,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id ~/.config/i3/scripts/monitor.sh
 # Wallpaper
 exec_always --no-startup-id bash -c "sleep 0.5 && feh --bg-fill ~/.config/i3/wallpaper.jpg"
-# Keyboard us,ee
+# Keyboard us,ee - locale, language
 exec --no-startup-id setxkbmap -layout "us,ee" -option "grp:alt_shift_toggle"
 # Weather
 # exec --no-startup-id ~/.config/i3/scripts/weather.sh
@@ -68,12 +68,11 @@ bindsym $mod+Shift+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ tog
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Custom
-#interactive screenshot by pressing printscreen
+# interactive screenshot by pressing printscreen
 bindsym Print exec gnome-screenshot -i
-bindsym Control+Shift+4 exec maim -s ~/Pictures/"Screenshot from $(date +'%Y-%m-%d %H-%M-%S').png"
-bindsym Control+Shift+3 exec maim ~/Pictures/"Screenshot from $(date +'%Y-%m-%d %H-%M-%S').png"
-#crop-area screenshot by pressing Mod + printscreen
-# bindsym $mod+Print exec gnome-screenshot -a # doesn't work
+# screeshot (mac style)
+bindsym Control+Shift+4 exec "maim -s | xclip -selection clipboard -t image/png; xclip -selection clipboard -t image/png -o > ~/Pictures/$(date +%F-%H:%M:%S).png"
+bindsym Control+Shift+3 exec "maim | xclip -selection clipboard -t image/png; xclip -selection clipboard -t image/png -o > ~/Pictures/$(date +%F-%H:%M:%S).png" 
 # Brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
@@ -92,7 +91,7 @@ bindsym $mod+b exec firefox
 bindsym Control+$alt+q exec i3lock -c 000000  # black background
 # systemctrl menu
 bindsym Control+$alt+Delete exec --no-startup-id ~/.local/bin/systemctl-menu
-# Toggle screen recording with Mod+Shift+r
+# Toggle screen recording with Mod+Shift+v
 bindsym $mod+Shift+v exec --no-startup-id ~/.config/i3/scripts/screen-record.sh
 # Center a floating window
 bindsym $mod+c move position center
