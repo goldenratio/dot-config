@@ -1,6 +1,9 @@
 alias cat='bat'
+alias cls='clear'
 alias open='xdg-open'
 alias z='yazi'
+alias st='wezterm cli set-tab-title $(basename $(pwd))'
+alias ncu='npx npm-check-updates'
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
