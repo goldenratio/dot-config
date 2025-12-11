@@ -5,11 +5,29 @@ config = { "provideFormatter" = true, "json" = { "keepLines" = { "enable" = true
 command = "codebook-lsp"
 args = ["serve"]
 
+[language-server.wgsl_analyzer]
+command = "wgsl-analyzer"
+
+[language-server.astro-ls]
+command = "astro-ls"
+args = ["--stdio"]
+config = {typescript = {tsdk = "/usr/local/lib/node_modules/typescript/lib"}, environment = "node"}
+
+
 #######
+# [[language]]
+# name = "markdown"
+# soft-wrap.enable = true
+
 [[language]]
 name = "json"
 file-types = ["json", "jsonc", { glob = "*.json.schema" }]
 language-servers = [ "vscode-json-language-server" ]
+
+[[language]]
+name = "astro"
+auto-format = true
+language-servers = [ "astro-ls" ]
 
 [[language]]
 name = "swift"
@@ -43,5 +61,13 @@ auto-format = true
 name = "javascript"
 language-servers = [ "typescript-language-server", "codebook" ]
 auto-format = true
+
+[[language]]
+name = "glsl"
+file-types = ["fs", "vs", "frag", "vert", "glsl"]
+
+[[language]]
+name = "wgsl"
+file-types = ["wgsl"]
 
 ###############
