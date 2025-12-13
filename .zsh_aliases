@@ -4,6 +4,7 @@ alias open='xdg-open'
 alias z='yazi'
 alias st='wezterm cli set-tab-title $(basename $(pwd))'
 alias ncu='npx npm-check-updates'
+alias dus='du -h --max-depth=1 | sort -hr'
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
