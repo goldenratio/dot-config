@@ -96,3 +96,33 @@ C-y = ":sh wezterm cli split-pane --left --percent 30 -- ~/.config/helix/wezilix
 # scroll a lot
 "j" = ["half_page_down", "goto_window_center"]
 "k" = ["half_page_up", "goto_window_center"]
+
+
+# https://github.com/spideyclick/dotfiles/blob/69b92d2f4ee69d08979948072762096385078efb/config/.config/helix/config.toml#L164
+[keys.normal.m]
+"\"" = "@mi\"c"
+"'" = "@mi'c"
+
+[keys.normal.m.n]
+"\"" = "@f\"lmi\"c"
+"'" = "@f'lmi'c"
+
+"(" = "@f(lmi(c"
+"[" = "@f[lmi[c"
+"{" = "@f{lmi{c"
+
+")" = "@f)hmi)c"
+"]" = "@f]hmi]c"
+"}" = "@f}hmi}c"
+
+[keys.normal.m.p]
+"\"" = "@F\"hmi\"c"
+"'" = "@F'hmi'c"
+
+"(" = "@F(lmi(c"
+"[" = "@F[lmi[c"
+"{" = "@F{lmi{c"
+
+")" = "@F)hmi)c"
+"]" = "@F]hmi]c"
+"}" = "@F}hmi}c"
