@@ -23,35 +23,11 @@ left = ["mode", "spinner", "version-control", "file-modification-indicator", "fi
 display-inlay-hints = false
 auto-signature-help = false
 
-[keys.normal.space]
-i = ":toggle lsp.display-inlay-hints"
-# copy current file name to clipboard
-"=" = "@\"%p<space>yu"
-# show git blame
-B = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{cursor_line},+1:%{buffer_name}"
-
-[keys.normal.space.q]
-q = ":toggle inline-diagnostics.cursor-line error disable"
-w = ":toggle end-of-line-diagnostics hint disable"
-s = ":toggle soft-wrap.enable"
-# search and replace
-r = [
-    ":write-all",
-    ":insert-output scooter --no-stdin >/dev/tty",
-    ":redraw",
-    ":reload-all"
-]
-
-[keys.insert]
-"C-s" = ":w"
-"C-k" = "signature_help"
-
-C-right = "goto_line_end_newline"
-C-left = "goto_line_start"
-
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
 X = "extend_line_above"
+D = "goto_word"
+# "C-i" = "jump_forward"
 
 # duplicate line up
 "C-up" = ["extend_to_line_bounds", "yank", "open_above", "normal_mode", "replace_with_yanked", "collapse_selection"] 
@@ -91,7 +67,17 @@ C-r = ":reload-all"
 ## Zellij
 # C-y = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh open"
 ## wezterm
-C-y = ":sh wezterm cli split-pane --left --percent 30 -- ~/.config/helix/wezilix.sh $WEZTERM_PANE open    zoom > /dev/null"
+# C-y = ":sh wezterm cli split-pane --left --percent 30 -- ~/.config/helix/wezilix.sh $WEZTERM_PANE open    zoom > /dev/null"
+# https://github.com/helix-editor/helix/issues/15059
+C-y = [
+  ':sh rm -f /tmp/unique-file',
+  ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file}',
+  ':redraw',
+  ':set mouse false',
+  ':set mouse true',
+]
 
 # scroll a lot
 "j" = ["half_page_down", "goto_window_center"]
@@ -126,3 +112,29 @@ C-y = ":sh wezterm cli split-pane --left --percent 30 -- ~/.config/helix/wezilix
 ")" = "@F)hmi)c"
 "]" = "@F]hmi]c"
 "}" = "@F}hmi}c"
+
+[keys.normal.space]
+i = ":toggle lsp.display-inlay-hints"
+# copy current file name to clipboard
+"=" = "@\"%p<space>yu"
+# show git blame
+B = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{cursor_line},+1:%{buffer_name}"
+
+[keys.normal.space.q]
+q = ":toggle inline-diagnostics.cursor-line error disable"
+w = ":toggle end-of-line-diagnostics hint disable"
+s = ":toggle soft-wrap.enable"
+# search and replace
+r = [
+    ":write-all",
+    ":insert-output scooter --no-stdin >/dev/tty",
+    ":redraw",
+    ":reload-all"
+]
+
+[keys.insert]
+"C-s" = ":w"
+"C-k" = "signature_help"
+
+C-right = "goto_line_end_newline"
+C-left = "goto_line_start"
